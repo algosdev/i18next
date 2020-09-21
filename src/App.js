@@ -1,24 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./components/Navbar";
+import Content from "./components/Content";
+// import { useTranslation, Trans } from "react-i18next";
 
 function App() {
+  // const { i18n } = useTranslation();
+  // const handleClick = (lang) => {
+  //   i18n.changeLanguage(lang);
+  // };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <Navbar />
+      <Content />
+      {/* <div>
+        <button
+          onClick={() => {
+            handleClick("en");
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          English
+        </button>
+        <button
+          onClick={() => {
+            handleClick("ru");
+          }}
+        >
+          Russian
+        </button>
+        <button
+          onClick={() => {
+            handleClick("uz");
+          }}
+        >
+          Uzbek
+        </button>
+        <div>
+          <Trans i18nKey="Statement">This should be translated</Trans>
+          <Trans i18nKey="Reason">Beacuse it is what it does</Trans>
+          <p>{t("Statement")}</p>
+          <p>{t("Reason")}</p>
+        </div>
+      </div> */}
     </div>
   );
 }
